@@ -39,7 +39,7 @@ export const Login = async(request,response) => {
             }
         });
         const match = await bcrypt.compare(request.body.password, user[0].password);
-        if(!match) return response.status(400).json({msg: "Password Tidak Sesuai"});
+        if(!match) return response.status(400).json({msg: "Password is invalid"});
         const userid = user[0].id;
         const name = user[0].name;
         const email = user[0].email;
@@ -61,7 +61,7 @@ export const Login = async(request,response) => {
 
         response.json({accessToken});
     }catch(error){
-        response.status(404).json({msg:"username tidak valid"}); 
+        response.status(404).json({msg:"Username is invalid"}); 
     }
 }
 

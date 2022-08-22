@@ -1,0 +1,30 @@
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOjEsIm5hbWUiOiJ0ZWQiLCJlbWFpbCI6InRpYXJhZWthZGVsQGdtYWlsLmNvbSIsImlhdCI6MTY2MTE0NjU5NSwiZXhwIjoxNjYxMTQ2NjI1fQ.daPN6EqK2CJG3Zai-jSE5cKsT57_alIoHQ6zG6_ssVs
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "ted 2",
+    "email": "tiaraekadel2@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "tiaraekadel@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3000/token
+Content-Type: application/json
+
+###
+DELETE http://localhost:3000/logout
+Content-Type: application/json
